@@ -33,7 +33,7 @@ def favorite_restaurant():
     # Let's ask the user for some information about their favorite restaurant
 
     # 2.1 TODO: Create an empty dictionary in a variable called `favorite_restaurant`
-    favorite_restaurant = []
+    favorite_restaurant = {}
     # 2.2 TODO: Ask the user for the restaurant `name`, `address`, and their `favorite_dish`
     # Add all three of these as key value pairs in your new dictionary, ala:
     #    favorite_restaurant  = {
@@ -41,8 +41,8 @@ def favorite_restaurant():
     #        "address" : "116th & Broadway, NY 10016",
     #        "favorite_dish" : "Chicken BLT Sandwich"
     #    }
-    favorite_restaurant['name'] = input('What is your favorite restaurant?')
-    favorite_restaurant['address'] = input('What is the address of your favorite restaurant?')
+    favorite_restaurant['name'] = input('What is the name of your favorite restaurant?')
+    favorite_restaurant['address'] = input('What is the address of that restaurant?')
     favorite_restaurant['favorite_dish'] = input('What is your favorite dish?')
     # 2.3 TODO: Print out your dictionary to make sure it populated correctly
     print(favorite_restaurant)
@@ -67,5 +67,5 @@ def clean_print():
     #      `name: Four Barrel Coffee
     #       url: https://www.yelp.com/biz/four-barrel-coffee-san-francisco`
     # etc etc
-     for key, val in restaurant_1.items():
-        print(f"{key}: {val}")
+    for key in restaurant_1:
+        print(f'{key}: {restaurant_1[key]}')
